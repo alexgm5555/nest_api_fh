@@ -22,11 +22,13 @@ export class CreateProductDto {
   @MinLength(1)
   title: string;
 
+  @ApiProperty()// para que aparezca el campo en swaegger
   @IsNumber()
   @IsPositive()
   @IsOptional()
   price?: number;
 
+  @ApiProperty()// para que aparezca el campo en swaegger
   @IsString()
   @IsOptional()
   description?: string;
