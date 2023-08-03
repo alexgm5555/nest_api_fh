@@ -33,27 +33,33 @@ export class CreateProductDto {
   @IsOptional()
   description?: string;
 
+  @ApiProperty()// para que aparezca el campo en swaegger
   @IsString()
   @IsOptional() // se puede con un¿a expresion regular
   slug?: string;
 
+  @ApiProperty()// para que aparezca el campo en swaegger
   @IsInt()
   @IsPositive()
   @IsOptional()
   stock?: number;
 
+  @ApiProperty()// para que aparezca el campo en swaegger
   @IsString({ each: true }) //para que cada uno de los arreglos tenga que cumplir la condición destring
   @IsArray()
   sizes: string[];
 
+  @ApiProperty()// para que aparezca el campo en swaegger
   @IsString()
   @IsIn(['men', 'women', 'kid', 'unisex'])
   gender: string;
 
+  @ApiProperty()// para que aparezca el campo en swaegger
   @IsString({ each: true }) //para que cada uno de los arreglos tenga que cumplir la condición destring
   @IsArray()
   tags: string[];
 
+  @ApiProperty()// para que aparezca el campo en swaegger
   @IsString({ each: true })
   @IsArray()
   @IsOptional()
