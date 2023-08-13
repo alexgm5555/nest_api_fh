@@ -5,7 +5,7 @@ import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  // se copia para poder usar los decoradores en las dto
+  // se copia para poder usar los decoradores en las dto -
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true,
